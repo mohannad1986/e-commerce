@@ -106,9 +106,10 @@ class CheckoutController extends Controller
 
             $order = $this->addToOrdersTables($request, null);
 
-            // Mail::send(new OrderPlaced($order));
+            Mail::send(new OrderPlaced($order));
+            // تجربة 
             // ارسال الايميل عن طريق الجوب 
-            SendOrderPlacedEmail::dispatch($order);
+            // SendOrderPlacedEmail::dispatch($order);
 
             // // decrease the quantities of all the products in the cart
             $this->decreaseQuantities();
