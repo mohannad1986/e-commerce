@@ -15,7 +15,9 @@ use App\Models\OrderProduct;
 use App\Helpers\helpers;
 use Illuminate\Support\Facades\Mail;
 
-use App\mail\OrderPlaced;
+// use App\mail\OrderPlaced;
+use App\Mail\OrderPlaced;
+
 use App\Jobs\SendOrderPlacedEmail;
 
 
